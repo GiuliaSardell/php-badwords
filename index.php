@@ -16,6 +16,7 @@ $text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus comm
 <body>
 
 <h2> <?php echo $text ?> </h2>
+<h2> La stringa è lunga: <?php echo strlen($text) ?> caratteri </h2>
 
 </body>
 </html>
