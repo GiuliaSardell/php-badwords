@@ -1,6 +1,9 @@
 <?php
 
-$text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus commodi, aspernatur repudiandae nihil laudantium molestiae voluptatum dicta perferendis eveniet similique!'
+$text= 'Lorem ipsum dolor sit amet similique adipisicing elit. Temporibus commodi, aspernatur repudiandae nihil laudantium molestiae voluptatum dicta perferendis eveniet similique!';
+
+$badWord = 'similique';
+
 
 
 ?>
@@ -17,6 +20,12 @@ $text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus comm
 
 <h2> <?php echo $text ?> </h2>
 <h2> La stringa è lunga: <?php echo strlen($text) ?> caratteri </h2>
+<!-- http://localhost/php-badwords/index.php?badWord=similique -->
+<h2> La parola da censurare è: "<?php echo $_GET['badWord'] ?>" </h2>
+<h2>
+  <?php echo str_replace($badWord, '***', $text) ?>
+</h2>
+
 
 </body>
 </html>
